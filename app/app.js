@@ -17,6 +17,7 @@ import { MongoURI, Secret } from '../config/config.js';
 
 // Import Routes
 import indexRouter from './routes/index.route.server.js'
+import contactRouter from './routes/contacts.route.server.js';
 
 // Instantiate Express 
 const app = express();
@@ -46,5 +47,6 @@ app.use(session({
 
 // Use Routes
 app.use('/', indexRouter);
+app.use('/', contactRouter);
 
 export default app;
